@@ -1,0 +1,28 @@
+.header-bar{
+    color:white;
+    background-color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width:400px){
+    .header-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 50px;
+    }
+
+    .site-name{
+       
+        font-size: large;
+    }
+
+    .menu-btn{
+     width: 50px;
+     background-color: green;
+    }
+
+    .invisible-element{
+        width: 50px;
+    }
+}
