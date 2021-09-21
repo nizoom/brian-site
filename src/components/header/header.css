@@ -17,12 +17,18 @@
         font-size: large;
     }
 
-    .menu-btn{
+    /* .menu-btn{
      width: 50px;
-     background-color: green;
-    }
+    } */
 
     .invisible-element{
-        width: 50px;
+        width: 30px;
+    }
+
+    .burger-icon{
+        margin:0;
+        width: 30px;
+        height: 30px;
+        padding: 0;
     }
 }

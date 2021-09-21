@@ -2,11 +2,15 @@ import React from "react";
 
 import "./navbtn.css"
 
+import BurgerIcon from "../../../images/burger.png"
+
 const NavBtn = (props) => {
     return (
         <div>
-            <button onClick = {props.clicked} className = "menu-btn"> Menu </button>
-
+      
+            <img src = {BurgerIcon} alt = "burger-icon"  className = "burger-icon" onClick = {props.clicked}/>
+         
+     
         </div>
     )
 }
