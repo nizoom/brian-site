@@ -1,12 +1,22 @@
 import './App.css';
 import Header from './components/header/header';
-import BurgerIcon from "./images/burger.png"
+import NavMenu from './components/navigation/navmenu';
+import React from "react"
+
 function App() {
+
+  const [activateMenu, setActivateMenu] = React.useState(true); 
+
+  function getMenuStatus ( status ){
+    // save status to state
+    setActivateMenu(status)
+  }
+  
   return (
+
     <div className="App">
-      <Header/>
-        
-         <img src = {BurgerIcon} alt = "burger-icon"/>
+      <Header callback = {getMenuStatus}/>
+      <NavMenu menuStatus = {activateMenu}/>
 
       
     </div>

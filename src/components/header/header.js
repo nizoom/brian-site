@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "./header.css"
 
 
 import NavBtn from "./navbutton/navbtn";
 
-const Header = ( ) => {
+const Header = ( props ) => {
+
+    const [activateMenu, setActiveMenu] = useState(true);
 
     function handleMenuBtnClick(){
-        console.log("Menu Clicked!")
+        // console.log("Menu Clicked!")
+        setActiveMenu(!activateMenu)
+        props.callback(activateMenu)
     }
     return (
         <div>
