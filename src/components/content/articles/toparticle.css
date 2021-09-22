@@ -1,0 +1,39 @@
+/* at 400 px wide or less  */
+
+.top-article-wrapper{
+    background: url("../../../images/thumnail.jpg");
+    background-size: cover;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.top-article-content{
+    padding: 5px;
+    padding-top: 25%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    color:white;
+
+}
+
+.article-wrapper{
+    margin: 15px 10px 15px 10px;
+    background: url("../../../images/thumnail.jpg");
+    background-size: cover;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.article-content{
+    padding: 5px;
+    padding-top: 25%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    color:white;
+
+}
+

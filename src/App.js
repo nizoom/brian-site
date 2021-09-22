@@ -1,11 +1,12 @@
+import React from "react"
 import './App.css';
 import Header from './components/header/header';
 import NavMenu from './components/navigation/navmenu';
-import React from "react"
+import Content from "./components/content/content";
 
 function App() {
 
-  const [activateMenu, setActivateMenu] = React.useState(true); 
+  const [activateMenu, setActivateMenu] = React.useState(false); 
 
   function getMenuStatus ( status ){
     // save status to state
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       <Header callback = {getMenuStatus}/>
       <NavMenu menuStatus = {activateMenu}/>
-
+      <Content/>
       
     </div>
   );
