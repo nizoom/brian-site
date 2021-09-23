@@ -16,9 +16,9 @@ function App() {
   return (
 
     <div className="App">
-      <Header callback = {getMenuStatus}/>
+      <Header callback = {getMenuStatus} style = {{outline:" 1px red solid !important", visibility: "visible !important" }}/>
       <NavMenu menuStatus = {activateMenu}/>
-      <Content/>
+      <Content/> 
       
     </div>
   );

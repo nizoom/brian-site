@@ -1,4 +1,8 @@
 
+.socials-wrapper a{
+    cursor: pointer;
+}
+
 @media(max-width:400px){
 
     .convos-logo{
@@ -24,6 +28,7 @@
         float: right;
         margin-top: 125px;
     }
+
     
     .podcast-gen-description{
         background-color: #A6ACAF;
