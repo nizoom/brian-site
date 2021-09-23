@@ -5,6 +5,25 @@
         width: 200px;
         height: 200px;
     }
+
+    .ig-button{
+        width: 75px;
+        height: 75px;
+    }
+
+    .youtube-btn{
+        width: 85px;
+        height: 60px;
+    }
+
+    .socials-wrapper{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        float: right;
+        margin-top: 125px;
+    }
     
     .podcast-gen-description{
         background-color: #A6ACAF;
