@@ -1,43 +1,47 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 
 import "./navmenu.css"
 
 
 const NavMenu = (props) => {
 
-    const [savedRefs, setsavedRefs] = useState("empty")
+    // const [savedRefs, setsavedRefs] = useState("empty")
 
-    useEffect(() => {
-        if(props.refs.length > 0){
-            console.log(props.refs)
-            const [articlesRef, podcastRef, photographyRef] = props.refs;
-            setsavedRefs([articlesRef, podcastRef, photographyRef])
+    // useEffect(() => {
+    //     if(props.refs.length > 0){
+    //         console.log(props.refs)
+    //         const [articlesRef, podcastRef, photographyRef] = props.refs;
+    //         setsavedRefs([articlesRef, podcastRef, photographyRef])
 
-        }
-    }, [props.refs])
+    //     }
+    // }, [props.refs])
 
     
-    function executeScroll(scrollTo){
-        scrollTo.scrollIntoView();
+    // function executeScroll(scrollTo){
+    //     scrollTo.scrollIntoView();
+    // }
+
+    function retrieveClickEvent(section){
+        props.callback(section)
     }
     return (
         <div>
 
-            {savedRefs !== "empty" ?
+    
             <nav className = { props.menuStatus ? "nav-menu" : "closed"}>
                 
                 <ul className = "links-list">
                     <hr className = "horizontal-line"/>     
-                    <li onClick={executeScroll(savedRefs[0])}>
+                    <li onClick={() => retrieveClickEvent("articles")}>
                         Articles
                        
                     </li> 
                     <hr className = "horizontal-line"/>   
-                    <li onClick={executeScroll(savedRefs[1])}>
+                    <li onClick={()=> retrieveClickEvent("podcasts")}>
                         Podcasts
                     </li>      
                     <hr className = "horizontal-line"/>    
-                    <li onClick={executeScroll(savedRefs[2])}>
+                    <li onClick={()=> retrieveClickEvent("photography")}>
                         Photography
                     </li>  
                     <hr className = "horizontal-line"/>             
@@ -45,8 +49,8 @@ const NavMenu = (props) => {
                      
                 </ul>
             </nav>  
-            : null
-            }
+            
+        
         </div>
     )
 }

@@ -6,9 +6,9 @@ import BurgerIcon from "../../../images/burger.png"
 
 const NavBtn = (props) => {
     return (
-        <div>
+        <div className = "menu-btn-wrapper">
             
-           {props.btnStatus?  
+           {!props.btnStatus?  
             <img src = {BurgerIcon} alt = "burger-icon"  className = "burger-icon" 
             onClick = {props.clicked}/> 
             : 

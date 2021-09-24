@@ -1,4 +1,4 @@
-import React, {useRef,useEffect} from "react";
+import React, {useRef} from "react";
 import SectionHeader from "./sectionheader/sectionheader";
 import TopArticle from "./articles/toparticle";
 import Article from "./articles/article";
@@ -9,13 +9,24 @@ const Content = (props) => {
     const podcastRef = useRef();
     const photographyRef = useRef();
 
-    function sendRefsToRoot(){
-        props.retrieveRefs(articlesRef.current, podcastRef.current, photographyRef.current)
-    }
 
-    useEffect(() => {
-        sendRefsToRoot()
-    })
+    if(props.clickedSection !== ""){
+        console.log(props.clickedSection)
+        switch(props.clickedSection){
+            case "articles":
+                articlesRef.current.scrollIntoView();
+                break;
+            case "podcasts":
+                podcastRef.current.scrollIntoView();
+                break;
+            case "photography":
+                photographyRef.current.scrollIntoView();
+                break;
+            default: 
+                console.log("failed to scroll")
+                props.headerRef.current.scrollIntoView();
+        }
+    }
     return (
         <div>
             <section ref= {articlesRef}>

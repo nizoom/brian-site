@@ -8,7 +8,8 @@ function App() {
 
   const [activateMenu, setActivateMenu] = React.useState(false); 
 
-  const [refState, setRefState] = React.useState([])
+  const [clickSection, setClickedSection] = React.useState("")
+ // const [refState, setRefState] = React.useState([])
 
   //const refSaver = React.useRef([]);
 
@@ -17,29 +18,26 @@ function App() {
     setActivateMenu(status)
   }
   
-  function retrieveRefs(articlesRef, podcastRef, photographyRef){
-    // console.log(articlesRef, podcastRef, photographyRef)
-    //setRefState([articlesRef, podcastRef, photographyRef])
-    console.log("fired")
-    //refSaver.current = [articlesRef, podcastRef, photographyRef]
+  
+  
+  function retrieveClick (section){
+    //console.log(section)
+    setClickedSection(section)
+    setActivateMenu(!activateMenu)
+    setTimeout(() => {setClickedSection("")},500)
   }
 
-  // React.useState(() => {
-  //   console.log(refState)
-  // }, [refState])
-  
-  // console.log(refSaver)
-  
+  const headerRef = React.headerRef
 
   return (
 
     <div className="App">
-      <Header callback = {getMenuStatus} style = {{outline:" 1px red solid !important", visibility: "visible !important" }}/>
+      <Header callback = {getMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef}/>
       <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
                 Hi, my name's Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             </h2>
-      <NavMenu menuStatus = {activateMenu} refs = {refState}/>
-      <Content retrieveRefs = {retrieveRefs}/> 
+      <NavMenu menuStatus = {activateMenu} callback = {retrieveClick} headerRef = {headerRef}/>
+      <Content clickedSection = {clickSection}/> 
       
     </div>
   );
