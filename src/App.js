@@ -8,20 +8,38 @@ function App() {
 
   const [activateMenu, setActivateMenu] = React.useState(false); 
 
+  const [refState, setRefState] = React.useState([])
+
+  //const refSaver = React.useRef([]);
+
   function getMenuStatus ( status ){
     // save status to state
     setActivateMenu(status)
   }
   
+  function retrieveRefs(articlesRef, podcastRef, photographyRef){
+    // console.log(articlesRef, podcastRef, photographyRef)
+    //setRefState([articlesRef, podcastRef, photographyRef])
+    console.log("fired")
+    //refSaver.current = [articlesRef, podcastRef, photographyRef]
+  }
+
+  // React.useState(() => {
+  //   console.log(refState)
+  // }, [refState])
+  
+  // console.log(refSaver)
+  
+
   return (
 
     <div className="App">
       <Header callback = {getMenuStatus} style = {{outline:" 1px red solid !important", visibility: "visible !important" }}/>
       <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
-                Hi My names Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                Hi, my name's Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             </h2>
-      <NavMenu menuStatus = {activateMenu}/>
-      <Content/> 
+      <NavMenu menuStatus = {activateMenu} refs = {refState}/>
+      <Content retrieveRefs = {retrieveRefs}/> 
       
     </div>
   );

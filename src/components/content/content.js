@@ -1,24 +1,35 @@
-import React from "react";
+import React, {useRef,useEffect} from "react";
 import SectionHeader from "./sectionheader/sectionheader";
 import TopArticle from "./articles/toparticle";
 import Article from "./articles/article";
 import Podcast from "./podcasts/podcast.js";
 import PhotographyDisplay from "./photography/photodisplay";
-const Content = () => {
+const Content = (props) => {
+    const articlesRef = useRef();
+    const podcastRef = useRef();
+    const photographyRef = useRef();
+
+    function sendRefsToRoot(){
+        props.retrieveRefs(articlesRef.current, podcastRef.current, photographyRef.current)
+    }
+
+    useEffect(() => {
+        sendRefsToRoot()
+    })
     return (
         <div>
-            <section>
+            <section ref= {articlesRef}>
                 <SectionHeader title = "Articles Section"/>
                 <TopArticle/>
                 <Article/>
                 <Article/>
             </section>
 
-            <section> 
+            <section ref = {podcastRef}> 
                 <SectionHeader title = "Podcasts"/>
                 <Podcast/>
             </section>
-            <section>
+            <section ref = {photographyRef}>
                 <SectionHeader title = "Photography"/>
                 <PhotographyDisplay/>
             </section>
