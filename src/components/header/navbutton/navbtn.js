@@ -8,9 +8,17 @@ const NavBtn = (props) => {
     return (
         <div>
             
+           {props.btnStatus?  
             <img src = {BurgerIcon} alt = "burger-icon"  className = "burger-icon" 
-            onClick = {props.clicked}/>
-         
+            onClick = {props.clicked}/> 
+            : 
+
+            <div className="close-menu-btn" onClick = {props.clicked} > 
+                X
+            </div>
+            
+            }
+
      
         </div>
     )

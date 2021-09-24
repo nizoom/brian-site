@@ -17,11 +17,15 @@ const Header = ( props ) => {
     return (
         <div>
             <header className="header-bar">
-                <NavBtn clicked= {handleMenuBtnClick}/>
+                <NavBtn clicked= {handleMenuBtnClick} btnStatus = {activateMenu}/>
 
                <em> <h1 className = "site-name"> Brian Sided </h1> </em>
                <div className = "invisible-element"></div>
             </header>
+
+            {/* <h2 className = {activateMenu ? "site-intro" : "closed"}> 
+                Hi My names Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            </h2> */}
         </div>
     )
 }

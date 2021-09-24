@@ -17,6 +17,9 @@ function App() {
 
     <div className="App">
       <Header callback = {getMenuStatus} style = {{outline:" 1px red solid !important", visibility: "visible !important" }}/>
+      <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
+                Hi My names Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            </h2>
       <NavMenu menuStatus = {activateMenu}/>
       <Content/> 
       
