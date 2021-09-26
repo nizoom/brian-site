@@ -9,22 +9,19 @@ function App() {
   const [activateMenu, setActivateMenu] = React.useState(false); 
 
   const [clickSection, setClickedSection] = React.useState("")
- // const [refState, setRefState] = React.useState([])
 
-  //const refSaver = React.useRef([]);
 
-  function getMenuStatus ( status ){
-    // save status to state
-    setActivateMenu(status)
+  function setMenuStatus (){
+  //in charge of changing menu off/on status
+    setActivateMenu(!activateMenu)
   }
   
   
   
-  function retrieveClick (section){
-    //console.log(section)
+  function retrieveClick (section){ // retrieve click from nav menu and saves it in a state hook
     setClickedSection(section)
-    setActivateMenu(!activateMenu)
-    setTimeout(() => {setClickedSection("")},500)
+    setMenuStatus(); // closes menu
+    setTimeout(() => {setClickedSection("")},500) //clears the state hook for next time //maybe not needed
   }
 
   const headerRef = React.headerRef
@@ -32,7 +29,7 @@ function App() {
   return (
 
     <div className="App">
-      <Header callback = {getMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef}/>
+      <Header callback = {setMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef}/>
       <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
                 Hi, my name's Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             </h2>

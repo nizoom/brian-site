@@ -5,6 +5,7 @@ import "./navbtn.css"
 import BurgerIcon from "../../../images/burger.png"
 
 const NavBtn = (props) => {
+    //depending on btn status this component will either show burger icon or X icon to close the menu
     return (
         <div className = "menu-btn-wrapper">
             

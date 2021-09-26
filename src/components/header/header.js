@@ -1,23 +1,21 @@
-import React, {useState} from "react";
+import React, {useRef} from "react";
 
 import "./header.css"
-
 
 import NavBtn from "./navbutton/navbtn";
 
 const Header = ( props ) => {
 
-    const [activateMenu, setActiveMenu] = useState(true);
 
-    function handleMenuBtnClick(){
-        // console.log("Menu Clicked!")
-        setActiveMenu(!activateMenu)
-        props.callback(activateMenu)
+    function handleMenuBtnClick(){ //triggers callback to app.js to change menu status
+        window.scrollTo(0,0)
+        props.callback()
     }
 
+    const headerRef = useRef();
 
     return (
-        <div>
+        <div className = "header-wrapper" ref = {headerRef}>
             <header className="header-bar">
                 <NavBtn clicked= {handleMenuBtnClick} btnStatus = {props.rootMenuStatus} />
 

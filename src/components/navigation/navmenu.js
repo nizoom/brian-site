@@ -5,23 +5,8 @@ import "./navmenu.css"
 
 const NavMenu = (props) => {
 
-    // const [savedRefs, setsavedRefs] = useState("empty")
-
-    // useEffect(() => {
-    //     if(props.refs.length > 0){
-    //         console.log(props.refs)
-    //         const [articlesRef, podcastRef, photographyRef] = props.refs;
-    //         setsavedRefs([articlesRef, podcastRef, photographyRef])
-
-    //     }
-    // }, [props.refs])
-
-    
-    // function executeScroll(scrollTo){
-    //     scrollTo.scrollIntoView();
-    // }
-
-    function retrieveClickEvent(section){
+    function retrieveClickEvent(section){ //sends back string representing click event to app.js. 
+        //The string represents which section of the site the user wants to view
         props.callback(section)
     }
     return (

@@ -5,6 +5,11 @@
 }
 
 @media (max-width:400px){
+    .header-wrapper{
+        position:sticky;
+        top:0;
+    }
+
     .header-bar{
         display: flex;
         align-items: center;
