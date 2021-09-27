@@ -4,6 +4,8 @@ import TopArticle from "./articles/toparticle";
 import Article from "./articles/article";
 import Podcast from "./podcasts/podcast.js";
 import PhotographyDisplay from "./photography/photodisplay";
+import "./content.css"
+
 const Content = (props) => {
     //refs for scrolling to sections when navu menu is clicked 
 
@@ -32,17 +34,21 @@ const Content = (props) => {
     return (
         <div>
             <section ref= {articlesRef}>
-                <SectionHeader title = "Articles Section"/>
+                <SectionHeader title = "Articles"/>
                 <TopArticle/>
                 <Article/>
                 <Article/>
             </section>
 
-            <section ref = {podcastRef}> 
+            <div ref = {podcastRef} className = "anchor"> </div>
+            <section> 
                 <SectionHeader title = "Podcasts"/>
                 <Podcast/>
             </section>
-            <section ref = {photographyRef}>
+
+
+            <div ref = {photographyRef} className = "anchor"> </div>
+            <section className = "father">
                 <SectionHeader title = "Photography"/>
                 <PhotographyDisplay/>
             </section>
