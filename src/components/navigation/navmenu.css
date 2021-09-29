@@ -1,7 +1,14 @@
+.nav-menu{
+    display: none;
+}
 
+.closed{
+    display: none;
+}
 
 @media(max-width: 800px){
     .closed{
+        display: block;
         transition: 0.5s ease all;
         width:0;
         overflow: hidden;
@@ -9,6 +16,7 @@
 
     }
     .nav-menu{
+        display: block;
         background-color: rgb(7,55,89);
         color: #D6DAE3;
         height: 100vh;

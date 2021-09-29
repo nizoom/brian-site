@@ -35,9 +35,11 @@ const Content = (props) => {
         <div>
             <section ref= {articlesRef}>
                 <SectionHeader title = "Articles"/>
-                <TopArticle/>
-                <Article/>
-                <Article/>
+                <div className="article-layout"> 
+                    <TopArticle className = "tile"/>
+                    <Article className = "tile"/>
+                    <Article className = "tile"/>
+                </div>
             </section>
 
             <div ref = {podcastRef} className = "anchor"> </div>

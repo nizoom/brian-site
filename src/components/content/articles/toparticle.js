@@ -1,5 +1,5 @@
 import React from "react";
-import "./toparticle.css"
+import "./articles.css"
 
 const TopArticle = (props) => {
     return (
