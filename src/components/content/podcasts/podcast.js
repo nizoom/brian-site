@@ -17,7 +17,8 @@ const Podcast = () => {
                         alt="Transparent Youtube Logo Clipart @transparentpng.com" className = "youtube-btn"/>
                     </a>
                 </div> 
-            <h3 className = "podcast-gen-description"> A cutting-edge football podcast where we discuss Europe's top five leagues</h3>
+            <h3 className = "podcast-gen-description"> A cutting-edge football podcast where we discuss Europe's top five leagues. 
+            <span className = "pod-call-to-action"> Check out our latest episodes:</span> </h3>
            
             <PodcastEpisode title = "All About Arsenal" embedurl = "https://www.youtube.com/embed/CM4WnwdNPK4"/>
             <PodcastEpisode title = "Transfers, Transfers, Transfers..." embedurl = "https://www.youtube.com/embed/BqLA22qB0RE"/>

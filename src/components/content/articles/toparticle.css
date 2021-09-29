@@ -1,5 +1,5 @@
 /* at 400 px wide or less  */
-@media(max-width:500px){
+@media(max-width: 800px){
     .top-article-wrapper{
         background: url("../../../images/thumnail.jpg");
         background-size: cover;
@@ -10,14 +10,14 @@
     
     .top-article-content{
         padding: 5px;
-        padding-top: 25%;
+        padding-top: 0;
         text-align: left;
         font-size: 30px;
         font-weight: 500;
         color:white;
     
     }
-    
+
     .article-wrapper{
         margin: 15px 10px 15px 10px;
         background: url("../../../images/thumnail.jpg");
@@ -29,13 +29,30 @@
     
     .article-content{
         padding: 5px;
-        padding-top: 25%;
+        padding-top: 0;
         text-align: left;
         font-size: 30px;
         font-weight: 500;
         color:white;
     
     }
-    
 }
+ @media(max-width:500px){
+
+    
+    .top-article-content{
+        padding-top: 25%;    
+    }
+
+    /* .article-wrapper{
+ 
+    } */
+    
+    .article-content{
+        padding-top: 25%;
+
+    }
+
+    
+} 
 
