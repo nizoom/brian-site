@@ -3,7 +3,83 @@
     cursor: pointer;
 }
 
+.convos-logo{
+    width: 300px;
+    height: 300px;
+}
+
+
+.ig-button{
+    width: 75px;
+    height: 75px;
+}
+
+.youtube-btn{
+    width: 85px;
+    height: 60px;
+}
+
+.podcast-section-wrapper{
+    position: relative;
+}
+.follow{
+    color: white;
+}
+.socials-wrapper{
+    /* margin-top: 50px;
+    right: 500px; */
+    background-color: #333333;
+    padding: 1%;
+    border-radius: 0 0 16px 16px;
+    position: absolute;
+    top:-20px;
+    left:.5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.podcast-gen-description{
+    background-color: #A6ACAF;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+.pod-call-to-action{
+    color: #C11611;
+}
+
+.podcast-episode-title{
+    width: 97%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 16px;
+    text-align: left;
+    padding: 10px 0 10px 15px;
+    background-color: lightgray;
+    font-size: large;
+}
+
+.video-player{
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+}
+
 @media(max-width: 800px){
+
+    /* .promos{
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+    .podcast-section-wrapper{
+        position: relative;
+    }
+
     .convos-logo{
         width: 400px;
         height: 400px;
@@ -24,7 +100,9 @@
         justify-content: center;
         align-items: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
     }
 
     
@@ -59,6 +137,18 @@
 }
 
 @media(max-width:500px){
+
+    .socials-wrapper{
+        /* background-color: white; */
+        position: absolute;
+        border-radius: 0 0 16px 16px;
+        margin-right: 5px;
+        padding: 0;
+    }
+
+    .follow{
+        display: none;
+    }
     .podcast-gen-description{
      font-size: medium;
     }
@@ -109,9 +199,10 @@
     }
 
     .socials-wrapper{
-       
+        position: static;
         float: right;
-        margin-top: 90px;
+        margin-top: 50px;
+        border-radius: 16px;
     }
 
     
@@ -130,10 +221,6 @@
 
 @media(max-width: 350px){
     .socials-wrapper{
-        /* justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row; */
         margin-top: 50px;
         flex-direction: column;
     }

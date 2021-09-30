@@ -27,20 +27,31 @@
 }
 
 .desktop-menu-wrapper{
-    /* flex: 50%; */
+    cursor: pointer;
     float:right;
     text-align:  right;
     display: flex;
     align-items: flex-end;
     margin-bottom:10px;
     height: 100%;
-   margin-right:0;
+    margin-right:20px;
 }
 
+
+.desktop-menu-item:hover{
+    color: salmon;
+    transition: .5s;
+}
 
 .desktop-menu-item{
     text-align: right;
    padding: 0 10px 0 10px;
+}
+
+.header-wrapper{
+    position:sticky;
+    top:0;
+    z-index: 1000;
 }
 
 @media(max-width: 800px){
