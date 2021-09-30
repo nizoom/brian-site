@@ -15,6 +15,9 @@
     font-size: x-large;
 }
 
+.intro-description{
+  font-size: 50%;
+}
 .gone{
   display: none;
   /* width: 0;

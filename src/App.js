@@ -39,7 +39,7 @@ function App() {
       <Header callback = {setMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef} callback = {retrieveClick}/>
       <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
                 Hi, my name's Brian  <br/>
-                <span> I Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
+                <span className = "intro-description"> I Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
             </h2>
       <NavMenu menuStatus = {activateMenu} callback = {retrieveClick}/>
       <Content clickedSection = {clickSection} headerRef = {headerRef}/> 
