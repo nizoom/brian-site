@@ -24,10 +24,12 @@ const Podcast = () => {
                 <h3 className = "podcast-gen-description"> A cutting-edge football podcast where we discuss Europe's top five leagues. 
                 <span className = "pod-call-to-action"> Check out our latest episodes:</span> </h3>
             {/* </div> */}
-            <PodcastEpisode title = "All About Arsenal" embedurl = "https://www.youtube.com/embed/CM4WnwdNPK4"/>
-            <PodcastEpisode title = "Transfers, Transfers, Transfers..." embedurl = "https://www.youtube.com/embed/BqLA22qB0RE"/>
-            <PodcastEpisode title = "The European Super League" embedurl = "https://www.youtube.com/embed/OtbtA6w2k68"/>
-
+            <div className = "podcast-episode-wrapper"> 
+                <PodcastEpisode title = "All About Arsenal" embedurl = "https://www.youtube.com/embed/CM4WnwdNPK4"/>
+                <PodcastEpisode title = "Transfers, Transfers, Transfers..." embedurl = "https://www.youtube.com/embed/BqLA22qB0RE"/>
+                <PodcastEpisode title = "The European Super League" embedurl = "https://www.youtube.com/embed/OtbtA6w2k68"/>
+                <PodcastEpisode title = "January Transfer Window Speculation" embedurl = "https://www.youtube.com/embed/nPPJZv27fNU"/>
+            </div>
         </div>
     )
 }

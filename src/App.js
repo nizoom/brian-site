@@ -20,21 +20,29 @@ function App() {
   
   function retrieveClick (section){ // retrieve click from nav menu and saves it in a state hook
     setClickedSection(section)
-    setMenuStatus(); // closes menu
-    setTimeout(() => {setClickedSection("")},500) //clears the state hook for next time //maybe not needed
+    //if window is 800px or below change menu status
+    if(window.innerWidth < 800){
+      setMenuStatus(); // closes menu
+      setTimeout(() => {setClickedSection("")},500) //clears the state hook for next time //maybe not needed
+    }
+    
   }
 
-  const headerRef = React.headerRef
+  // React.useEffect(() => {
+
+  // }, [])
+  const headerRef = React.useRef();
 
   return (
 
     <div className="App">
-      <Header callback = {setMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef}/>
+      <Header callback = {setMenuStatus} rootMenuStatus = {activateMenu} ref={headerRef} callback = {retrieveClick}/>
       <h2 className = {!activateMenu ? "site-intro" : "gone"}> 
-                Hi, my name's Brian and I Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                Hi, my name's Brian  <br/>
+                <span> I Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
             </h2>
-      <NavMenu menuStatus = {activateMenu} callback = {retrieveClick} headerRef = {headerRef}/>
-      <Content clickedSection = {clickSection}/> 
+      <NavMenu menuStatus = {activateMenu} callback = {retrieveClick}/>
+      <Content clickedSection = {clickSection} headerRef = {headerRef}/> 
       
     </div>
   );

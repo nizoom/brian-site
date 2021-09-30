@@ -12,6 +12,10 @@ const Header = ( props ) => {
         props.callback()
     }
 
+    function retrieveClickEvent(section){
+        props.callback(section)
+    }
+
     const headerRef = useRef();
 
     return (
@@ -25,11 +29,11 @@ const Header = ( props ) => {
                 {/* This element is for desktop screens */}
                 
                     <div className = "desktop-menu-wrapper"> 
-                        <p className="desktop-menu-item"> Articles </p>
+                        <p className="desktop-menu-item" onClick = {() => retrieveClickEvent("articles")}> Articles </p>
 
-                        <p className="desktop-menu-item"> Podcasts </p>
+                        <p className="desktop-menu-item" onClick = {()=> retrieveClickEvent("podcasts")}> Podcasts </p>
 
-                        <p className="desktop-menu-item"> Photography </p>
+                        <p className="desktop-menu-item" onClick = {()=> retrieveClickEvent("photography")}> Photography </p>
                 
                     </div>
           

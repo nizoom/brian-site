@@ -13,6 +13,7 @@ const Content = (props) => {
     const podcastRef = useRef();
     const photographyRef = useRef();
 
+    //console.log(props.headerRef.current)
     //switch operator so that the window scrolls based on string from prop
     if(props.clickedSection !== ""){
         console.log(props.clickedSection)
@@ -28,7 +29,7 @@ const Content = (props) => {
                 break;
             default: 
                 console.log("failed to scroll")
-                props.headerRef.current.scrollIntoView(); // change this 
+                //props.headerRef.current.scrollIntoView(); // change this 
         }
     }
     return (

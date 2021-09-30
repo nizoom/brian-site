@@ -3,7 +3,7 @@ import "./podcast.css"
 
 const PodcastEpisode = (props) => {
     return(
-        <div>
+        <div className="pod-episode">
             <h4 className = "podcast-episode-title"> {props.title} </h4>
             <iframe className = "video-player"
             src= {props.embedurl}
