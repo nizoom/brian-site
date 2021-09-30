@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/brian-site/static/css/main.fceb418c.chunk.css",
+    "main.js": "/brian-site/static/js/main.6f9cfa1c.chunk.js",
+    "main.js.map": "/brian-site/static/js/main.6f9cfa1c.chunk.js.map",
+    "runtime-main.js": "/brian-site/static/js/runtime-main.25de6ddd.js",
+    "runtime-main.js.map": "/brian-site/static/js/runtime-main.25de6ddd.js.map",
+    "static/js/2.7fde3bab.chunk.js": "/brian-site/static/js/2.7fde3bab.chunk.js",
+    "static/js/2.7fde3bab.chunk.js.map": "/brian-site/static/js/2.7fde3bab.chunk.js.map",
+    "static/js/3.f2d7bba2.chunk.js": "/brian-site/static/js/3.f2d7bba2.chunk.js",
+    "static/js/3.f2d7bba2.chunk.js.map": "/brian-site/static/js/3.f2d7bba2.chunk.js.map",
+    "index.html": "/brian-site/index.html",
+    "static/css/main.fceb418c.chunk.css.map": "/brian-site/static/css/main.fceb418c.chunk.css.map",
+    "static/js/2.7fde3bab.chunk.js.LICENSE.txt": "/brian-site/static/js/2.7fde3bab.chunk.js.LICENSE.txt",
+    "static/media/chips.d5cb4b86.jpg": "/brian-site/static/media/chips.d5cb4b86.jpg",
+    "static/media/articles.css": "/brian-site/static/media/thumnail.a9c53d93.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25de6ddd.js",
+    "static/js/2.7fde3bab.chunk.js",
+    "static/css/main.fceb418c.chunk.css",
+    "static/js/main.6f9cfa1c.chunk.js"
+  ]
+}
